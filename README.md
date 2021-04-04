@@ -11,7 +11,7 @@ The easiest way to run the program is using IntelliJ, but you can run the projec
 1. Download/Clone the project
 2. Open it in IntelliJ. For any dependencies, which is needed by the project, are handled by Gradle. 
 3. Run "RunApplication" file, which is found in src -> main -> java.
-4. To check, if the project is up and running, go to localhost:8080/api/category from your browser. It should display the list of categories. To access the feedbacks (which are sent from the front), you can see them on localhost:8080/api/feedback.
+4. To check, if the project is up and running, go to `localhost:8080/api/category` from your browser. It should display the list of categories. To access the feedbacks (which are sent from the front), you can see them on `localhost:8080/api/feedback.
 
 ### Running the project from command line
 1. Switch into the feedback-manager-backend project folder.
