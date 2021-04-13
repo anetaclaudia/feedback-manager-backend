@@ -23,13 +23,10 @@ public class FeedbackService {
     public Feedback save(Feedback feedback) {
         Feedback savedFeedback = new Feedback();
         if (!validateName(feedback.getName()) && validateEmailAddress(feedback.getEmailAddress())){
-            savedFeedback.setName(feedback.getName());
-            savedFeedback.setEmailAddress(feedback.getEmailAddress());
-            savedFeedback.setFeedbackCategories(feedback.getFeedbackCategories());
-            savedFeedback.setText(feedback.getText());
             return feedbackRepository.save(savedFeedback);
+        } else {
+            throw new FeedbackException("Name or email is not in correct format.");
         }
-        throw new FeedbackException("Name or email is not in correct format.");
     }
 
     /**

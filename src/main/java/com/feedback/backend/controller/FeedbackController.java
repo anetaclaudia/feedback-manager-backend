@@ -21,14 +21,11 @@ public class FeedbackController {
 
     @GetMapping
     public List<FeedbackDto> getFeedbacks(){
-        System.out.println("GET");
         return mapper.feedbacksToDto(feedbackService.findAll());
     }
 
     @PostMapping
     public FeedbackDto saveFeedback(@RequestBody Feedback feedback){
-        System.out.println("POST");
-
         return mapper.feedbackToFeedbackDto(feedbackService.save(feedback));
     }
 }

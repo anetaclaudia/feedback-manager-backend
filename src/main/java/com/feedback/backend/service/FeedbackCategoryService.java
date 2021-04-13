@@ -33,13 +33,13 @@ public class FeedbackCategoryService {
         return feedbackCategory;
     }
 
-    public LinkedList<FeedbackCategoryDto> getAllCategoriesInOrder(){
+    public List<FeedbackCategoryDto> getAllCategoriesInOrder(){
         FeedbackCategory rootCategory = findRootCategory();
         return recursiveCategoryTree(rootCategory);
     }
 
-    public LinkedList<FeedbackCategoryDto> recursiveCategoryTree(FeedbackCategory root){
-        LinkedList<FeedbackCategoryDto> feedbackCategoryDtos = new LinkedList<>();
+    public List<FeedbackCategoryDto> recursiveCategoryTree(FeedbackCategory root){
+        List<FeedbackCategoryDto> feedbackCategoryDtos = new LinkedList<>();
         // Always add root to list
         FeedbackCategoryDto dtoToAdd = feedbackCategoryMapper.feedbackCategoryToFeedbackCategoryDto(root);
         feedbackCategoryDtos.add(dtoToAdd);
